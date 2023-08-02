@@ -3,7 +3,7 @@
 ## Instruktioner
 Denna deploy kommer publicera en onetimesecret server som kan nås på publikt ip och nodeport 30211.
 
-## Bygga image
+## Bygg en docker image från officiella onetimesecret
 ```bash
 git clone https://github.com/onetimesecret/onetimesecret.git
 ```
@@ -17,12 +17,12 @@ Gör eventuella ändringar i ```./etc/config``` och ```./etc/locale/```. Rekomme
 docker build . -t onetimesecret
 ```
 
-## Pusha image till eget docker register
-Tagga din image med ditt eget registry (but ut addressen):
+## Pusha din nybyggda image till eget docker registry
+Tagga först din image med ditt eget registry (but ut addressen):
 ```bash
 docker image tag onetimesecret registry.hardy.se/onetimesecret
 ```
-Pusha image till eget docker registry (byt ut addressen):
+Pusha imagen till eget docker registry (byt ut addressen):
 ```bash
 docker image push registry.hardy.se/onetimesecret
 ```
@@ -37,7 +37,10 @@ git clone https://github.com/kennhardy/k8s-snippets.git
 ```bash
 cd k8s-snippets/onetimesecret/kubernetes/
 ```
-Och kör sedan:
+
+Gör sedan alla nödvändiga ändringar i dina manifests. Bland annat behöver du förmodligen lägga till dina egna registry credentials i regcred secret för att kunna pulla image från registry. Denna secret refereras även till i deployment-filen. Kan även vara smart att köra den i en egen namespace.
+
+När alla ändringar är fixade kan samtliga manifests köras med (säkerställ att man är i rätt directory):
 ```bash
 kubectl apply -f *
 ```
