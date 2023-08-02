@@ -37,7 +37,7 @@ Kom ihåg att även ändra till rätt registry, imagenamn och eventuell tag (lat
 
 ## Apply samtliga kubernetes manifests
 ```bash
-cd k8s-snippets/onetimesecret
+cd k8s-snippets/onetimesecret/kubernetes
 ```
 Och kör sedan:
 ```bash
