@@ -58,7 +58,7 @@ kubectl run dnsutils --image=tutum/dnsutils --restart=Never --rm -it -- nslookup
 ```
 Kom ihåg att ändra namespace ifall liknande händer: ```<service-name>.<namespace>.svc.cluster.local```
 
-Såhär såg error-meddelande ut från app:
+Såhär såg error-meddelande ut från app när den inte kunde prata med eller få kontakt med redis:
 ```bash
 kubectl logs <pod> -c app
 ```
