@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  app:
+    build: .
+    depends_on:
+      - redis
+    environment:
+      ONETIMESECRET_REDIS_URL: redis://redis:6379
+      ONETIMESECRET_SSL: "true"
+      ONETIMESECRET_SECRET: 1234567890123456789012345678901234567890123456789012345678901234
+      ONETIMESECRET_HOST: onetimesecret.hardy.se
+    ports:
+      - 3000:3000
+    restart: always
+
+  redis:
+    image: redis:7.0-alpine
+    restart: always

@@ -1,4 +1,4 @@
-# k8s-snippets
+# k8s-onetimesecret
 
 ## Instruktioner
 Denna deploy kommer publicera en onetimesecret server som kan nås på publikt ip och nodeport 30211.
