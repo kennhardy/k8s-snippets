@@ -3,12 +3,6 @@
 ## Instruktioner
 Denna deploy kommer publicera en onetimesecret server som kan nås på publikt ip och nodeport 30211.
 
-```bash
-git clone https://github.com/kennhardy/k8s-snippets/tree/main/onetimesecret
-```
-
-Kom ihåg att bygga en image från: https://github.com/onetimesecret/onetimesecret.git
-
 ## Bygga image
 ```bash
 git clone https://github.com/onetimesecret/onetimesecret.git
@@ -35,7 +29,11 @@ docker image push registry.hardy.se/onetimesecret
 Kom ihåg att även ändra till rätt registry, imagenamn och eventuell tag (latest) i [onetimesecret-deployment.yml](onetimesecret-deployment.yml#L17).
 
 
-## Apply samtliga kubernetes manifests
+## Apply samtliga kubernetes manifests från detta repo
+```bash
+git clone https://github.com/kennhardy/k8s-snippets/tree/main/onetimesecret
+```
+
 ```bash
 cd k8s-snippets/onetimesecret/kubernetes
 ```
