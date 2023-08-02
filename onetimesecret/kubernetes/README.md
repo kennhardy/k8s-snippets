@@ -1,7 +1,7 @@
 # k8s-onetimesecret
 
 ## Instruktioner
-Denna deploy kommer publicera en onetimesecret server som kan nås på publikt ip och nodeport 30211.
+Denna deploy kommer publicera en onetimesecret server instans som kan nås på publikt ip och nodeport ```30211```. Följ instruktionerna enligt sidan, lägg gärna en issue om det inte fungerar.
 
 ## Bygg en docker image från officiella onetimesecret
 ```bash
