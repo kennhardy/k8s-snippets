@@ -44,7 +44,7 @@ För att skapa en base64 regcred kan man köra:
 ```bash
 echo -n '{"auths":{"registry.hardy.se":{"username":"your-username","password":"your-password","auth":"base64-encoded-authentication-token"}}}' | base64
 ```
-Byt sedan ut strängen ```BASE64encodedAuth``` i [onetimesecret-secrets-regcred.yml](onetimesecret-secrets-regcred.yml#L4) med din base64 sträng.
+Byt sedan ut strängen ```BASE64encodedAuth==``` i [onetimesecret-secrets-regcred.yml](onetimesecret-secrets-regcred.yml#L4) med din base64 sträng.
 
 När alla ändringar är fixade kan samtliga manifests köras med (säkerställ att man är i rätt directory):
 ```bash
