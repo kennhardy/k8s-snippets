@@ -17,7 +17,7 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 ```
 
-Gör eventuella ändringar i ./etc/config och locales-filen. Rekommenderar att endast använda SE + ENG som locales då det även finns inställningar i locales filerna.
+Gör eventuella ändringar i ```./etc/config``` och ```./etc/locale/```. Rekommenderar att endast använda sv_se + en som locales då det även finns inställningar i locales filerna. Bland annat email.incomingsupport.subject finns (ämnesraden för incoming) finns med i locales-filerna.
 
 docker build . -t onetimesecret
 
