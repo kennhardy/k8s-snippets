@@ -31,7 +31,7 @@ Kom ihåg att även ändra till rätt registry, imagenamn och eventuell tag (lat
 
 ## Apply samtliga kubernetes manifests från detta repo
 ```bash
-git clone https://github.com/kennhardy/k8s-snippets/tree/main/onetimesecret
+git clone https://github.com/kennhardy/k8s-snippets.git
 ```
 
 ```bash
