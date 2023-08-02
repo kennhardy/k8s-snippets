@@ -27,7 +27,7 @@ docker build . -t onetimesecret
 Lokalisera din image: docker image ls
 Tagga din image:
 ```bash
-docker tag onetimesecret registry.1webhost.xyz/onetimesecret
+docker image tag onetimesecret registry.1webhost.xyz/onetimesecret
 ```
 Pusha image:
 ```bash
