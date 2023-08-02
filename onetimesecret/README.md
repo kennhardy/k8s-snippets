@@ -31,6 +31,7 @@ Min kube-dns vägrade slå upp "redis" och gav luddig fel i loggen. För att tes
 ```bash
 kubectl run dnsutils --image=tutum/dnsutils --restart=Never --rm -it -- nslookup onetimesecret-service.default.svc.cluster.local
 ```
+Kom ihåg att ändra namespace ifall liknande händer: ```<service-name>.<namespace>.svc.cluster.local```
 
 Såhär såg error-meddelande ut från app:
 ```bash
