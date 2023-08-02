@@ -19,7 +19,9 @@ cd onetimesecret
 
 Gör eventuella ändringar i ```./etc/config``` och ```./etc/locale/```. Rekommenderar att endast använda "sv_SE" och "en" som locales då det även finns inställningar i locales filerna. Bland annat email.incomingsupport.subject finns (ämnesraden för incoming support) finns med i locales-filerna.
 
+```bash
 docker build . -t onetimesecret
+```
 
 ## Pusha image till eget docker register
 Lokalisera din image: docker image ls
