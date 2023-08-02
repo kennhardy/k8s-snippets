@@ -40,6 +40,12 @@ cd k8s-snippets/onetimesecret/kubernetes/
 
 Gör sedan alla nödvändiga ändringar i dina manifests. Bland annat behöver du förmodligen lägga till dina egna registry credentials i regcred secret för att kunna pulla image från registry. Denna secret refereras även till i deployment-filen. Kan även vara smart att köra den i en egen namespace.
 
+För att skapa en base64 regcred kan man köra:
+```bash
+echo -n '{"auths":{"registry.hardy.se":{"username":"your-username","password":"your-password","auth":"base64-encoded-authentication-token"}}}' | base64
+```
+Byt sedan ut ```BASE64encodedAuth``` i [onetimesecret-secrets-regcred.yml](onetimesecret-secrets-regcred.yml#L4)
+
 När alla ändringar är fixade kan samtliga manifests köras med (säkerställ att man är i rätt directory):
 ```bash
 kubectl apply -f *
