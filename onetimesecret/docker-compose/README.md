@@ -1,4 +1,4 @@
-# docker-onetimesecret
+# Onetimesecret i docker med docker-compose
 
 ## Instruktioner
 Ifall man önskar en docker-compose version av onetimesecret kan man göra enligt denna instruktion.
