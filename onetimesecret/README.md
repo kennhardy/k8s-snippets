@@ -27,11 +27,11 @@ docker build . -t onetimesecret
 Lokalisera din image: docker image ls
 Tagga din image:
 ```bash
-docker image tag onetimesecret registry.1webhost.xyz/onetimesecret
+docker image tag onetimesecret registry.hardy.se/onetimesecret
 ```
 Pusha image:
 ```bash
-docker image push registry.1webhost.xyz/onetimesecret
+docker image push registry.hardy.se/onetimesecret
 ```
 Kom ihåg att även ändra till rätt registrar, imagenamn och tag i [onetimesecret-deployment.yml](onetimesecret-deployment.yml#L17).
 
