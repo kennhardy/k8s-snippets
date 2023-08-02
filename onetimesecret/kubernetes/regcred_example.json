@@ -1,10 +1,1 @@
-{
-  "auths": {
-    "registry.hardy.se": {
-      "username": "your-username",
-      "password": "your-password",
-      "email": "your-email@example.com",
-      "auth": "base64-encoded-authentication-token"
-    }
-  }
-}
+{"auths":{"registry.hardy.se":{"username":"your-username","password":"your-password","auth":"base64-encoded-authentication-token"}}}
