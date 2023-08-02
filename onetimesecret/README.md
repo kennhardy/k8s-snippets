@@ -10,8 +10,12 @@ git clone https://github.com/kennhardy/k8s-snippets/tree/main/onetimesecret
 Kom ihåg att bygga en image från: https://github.com/onetimesecret/onetimesecret.git
 
 ## Bygga image
+```bash
 git clone https://github.com/onetimesecret/onetimesecret.git
+```
+```bash
 cd onetimesecret
+```
 
 Gör eventuella ändringar i ./etc/config och locales-filen. Rekommenderar att endast använda SE + ENG som locales då det även finns inställningar i locales filerna.
 
