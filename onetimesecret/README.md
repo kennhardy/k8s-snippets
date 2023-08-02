@@ -31,7 +31,7 @@ docker image tag onetimesecret registry.1webhost.xyz/onetimesecret
 ```
 Pusha image:
 ```bash
-docker push registry.1webhost.xyz/onetimesecret
+docker image push registry.1webhost.xyz/onetimesecret
 ```
 Kom ihåg att även ändra till rätt registrar, imagenamn och tag i [onetimesecret-deployment.yml](onetimesecret-deployment.yml#L17).
 
