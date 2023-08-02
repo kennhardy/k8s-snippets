@@ -25,3 +25,17 @@ Kom ihåg att även ändra till rätt registrar, imagenamn och tag i deployment-
 ## Apply samtliga kubernetes manifests
 CD in i <detta repo> och kör sedan:
 kubectl apply -f *
+
+## Felsökning
+Min kube-dns vägrade slå upp "redis" och gav luddig fel i loggen. För att testa ifall den slår upp namnet korrekt använde jag:
+```bash
+kubectl run dnsutils --image=tutum/dnsutils --restart=Never --rm -it -- nslookup onetimesecret-service.default.svc.cluster.local
+```
+
+Såhär såg error-meddelande ut från app:
+```bash
+kubectl logs <pod> -c app
+```
+```/usr/local/bundle/gems/redis-2.2.2/lib/redis/connection/ruby.rb:26:in `initialize': getaddrinfo: Name or service not known (SocketError)```
+
+PS! hela manifestet är skrivet till att köras i default namespace. Ändra allteftersom.
