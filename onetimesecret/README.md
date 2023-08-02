@@ -32,7 +32,7 @@ Pusha image till eget docker registry (byt ut addressen):
 ```bash
 docker image push registry.hardy.se/onetimesecret
 ```
-Kom ihåg att även ändra till rätt registrar, imagenamn och tag i [onetimesecret-deployment.yml](onetimesecret-deployment.yml#L17).
+Kom ihåg att även ändra till rätt registry, imagenamn och eventuell tag (latest) i [onetimesecret-deployment.yml](onetimesecret-deployment.yml#L17).
 
 
 ## Apply samtliga kubernetes manifests
