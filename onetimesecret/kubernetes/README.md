@@ -1,9 +1,9 @@
-# k8s-onetimesecret
+# Onetimesecret i k8s med kubernetes manifests
 
 ## Instruktioner
-Denna deploy kommer publicera en onetimesecret server instans som kan nås på publikt ip och nodeport ```30211```. Följ instruktionerna enligt sidan, lägg gärna en issue om det inte fungerar.
+Denna deploy kommer publicera en onetimesecret server instans som kan nås på publikt ip och nodeport ```30211```. Följ instruktionerna enligt sidan, lägg gärna en issue något inte fungerar.
 
-## Bygg en docker image från officiella onetimesecret
+## Bygg en custom docker image från officiella onetimesecret
 ```bash
 git clone https://github.com/onetimesecret/onetimesecret.git
 ```
@@ -11,7 +11,9 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 ```
 
-Gör eventuella ändringar i ```./etc/config``` och ```./etc/locale/```. Rekommenderar att endast använda "sv_SE" och "en" som locales då det även finns inställningar i locales filerna. Bland annat email.incomingsupport.subject finns (ämnesraden för incoming support) finns med i locales-filerna.
+Gör alla nödvändiga ändringar i ```./etc/config``` och ```./etc/locale/```. Rekommenderar att endast använda "sv_SE" och "en" som locales då det även finns inställningar i locales filerna. Bland annat email.incomingsupport.subject finns (ämnesraden för incoming support) finns med i locales-filerna.
+
+Imagen använder sig av systemvariablar som finns med i koden, men defaultar till standard ifall dom inte finns med. Användarnamn och lösenord tex är CHANGEME som default om inget annat anges.
 
 ```bash
 docker build . -t onetimesecret
