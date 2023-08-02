@@ -35,7 +35,7 @@ git clone https://github.com/kennhardy/k8s-snippets.git
 ```
 
 ```bash
-cd k8s-snippets/onetimesecret/kubernetes
+cd k8s-snippets/onetimesecret/kubernetes/
 ```
 Och kör sedan:
 ```bash
