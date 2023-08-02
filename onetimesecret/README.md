@@ -24,12 +24,11 @@ docker build . -t onetimesecret
 ```
 
 ## Pusha image till eget docker register
-Lokalisera din image: docker image ls
-Tagga din image:
+Tagga din image med ditt eget registry (but ut addressen):
 ```bash
 docker image tag onetimesecret registry.hardy.se/onetimesecret
 ```
-Pusha image:
+Pusha image till eget docker registry (byt ut addressen):
 ```bash
 docker image push registry.hardy.se/onetimesecret
 ```
